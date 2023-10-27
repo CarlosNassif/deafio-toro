@@ -1,0 +1,77 @@
+@import "../../../styles/vars";
+
+.card {
+  border: 1px solid $light-gray;
+  background: $default-white;
+  width: 18.5rem;
+  height: 18.11863rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .info-container {
+    padding: 2rem 2.5rem;
+    padding-bottom: unset;
+
+    > :not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    &-name,
+    &-acronym {
+      display: inline-block;
+      color: $dark-gray;
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-name {
+      margin-right: 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: $green;
+    fill: $green;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    &-arrow {
+      content: " ";
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5625rem;
+      flex-shrink: 0;
+
+      background-image: url("/assets/up-price.svg");
+    }
+
+    &--down {
+      color: $red;
+      fill: $red;
+
+      span {
+        background-image: url("/assets/down-price.svg");
+      }
+    }
+  }
+}

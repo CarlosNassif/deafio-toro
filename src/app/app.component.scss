@@ -1,0 +1,63 @@
+@import "../styles/vars";
+@import "../styles/mixins";
+
+.header {
+  background-color: $main-color;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    padding-left: clamp(0.75rem, 5.5%, 5rem);
+    padding-top: 1.82rem;
+    padding-bottom: 1.82rem;
+
+    max-width: 90rem;
+    width: 100%;
+  }
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: clamp(0.75rem, 5.5%, 5rem);
+    padding-right: clamp(0.75rem, 5.5%, 5rem);
+
+    max-width: 90rem;
+    width: 100%;
+
+    @include mobile {
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    @include tablet {
+      margin-bottom: 2.56rem;
+    }
+  }
+
+  &__title {
+    color: $main-color;
+    font-size: 2.625rem;
+    font-weight: 700;
+
+    margin-bottom: 3.71rem;
+
+    @include tablet {
+    }
+
+    @include mobile {
+      font-size: 1.5rem;
+      margin-bottom: 2.62rem;
+    }
+  }
+}

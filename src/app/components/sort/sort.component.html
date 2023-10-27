@@ -1,0 +1,19 @@
+<div class="container" *ngIf="haveQuotes">
+  <span class="container__label">Ordenar</span>
+  <div class="container__buttons">
+    <button
+      [class.container__button--active]="highToLow"
+      class="container__button"
+      (click)="sortHigh()"
+    >
+      Em Alta
+    </button>
+    <button
+      [class.container__button--active]="highToLow == false"
+      class="container__button"
+      (click)="sortLow()"
+    >
+      Em Baixa
+    </button>
+  </div>
+</div>

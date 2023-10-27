@@ -1,0 +1,46 @@
+@import "../../../styles/vars";
+@import "../../../styles/mixins";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1.06rem;
+
+  @include mobile {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__label {
+    color: $dark-gray;
+    font-family: $main-font;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  &__button {
+    width: 7.625rem;
+    height: 2.14306rem;
+    flex-shrink: 0;
+    border-radius: 6.25rem;
+
+    font-size: 0.875rem;
+    font-family: $main-font;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    color: $dark-gray;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    &--active {
+      background: $light-blue;
+      color: $default-white;
+      cursor: default;
+    }
+  }
+}

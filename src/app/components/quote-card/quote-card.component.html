@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="info-container">
+    <img [src]="imgSrc" [alt]="name" />
+    <div class="card__info">
+      <p class="card__info-name" [title]="name">{{ name }}</p>
+      <p class="card__info-acronym">{{ acronym }}</p>
+    </div>
+    <p class="card__title">Preço do Ativo</p>
+
+    <p
+      class="card__price"
+      [ngClass]="{
+      'card__price--down': !valueIncrease,
+    }"
+    >
+      {{ currentValue | currency : "BRL" }}
+      <span class="card__price-arrow"></span>
+    </p>
+  </div>
+
+  <app-chart [data]="currentValue" [timestamp]="timestamp"></app-chart>
+</div>

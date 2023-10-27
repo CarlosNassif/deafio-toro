@@ -1,0 +1,12 @@
+<div class="list">
+  <app-quote-card
+    *ngFor="let item of quotes$ | async; trackBy: itemKey"
+    [style.order]="item.order"
+    [class.list__item--hide]="item.order > 7"
+    class="list__item"
+    [acronym]="item.id"
+    [currentValue]="item.currentValue"
+    [timestamp]="item.timestamp"
+  >
+  </app-quote-card>
+</div>
